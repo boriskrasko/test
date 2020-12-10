@@ -5,6 +5,7 @@
 }
 
 body {
+	min-width: 320px;
 	font-family: Roboto, Arial, sans-serif;
 	background: #444;
 }
@@ -209,7 +210,7 @@ li {
 @media screen and (max-width: 928px) {
 	.center, .box-xl {
 		width: 100%;
-		min-width: 320px;
+		min-width: 316px;
 	}
 
 	.right {
@@ -279,4 +280,8 @@ li {
 	.container div {
 		width: 100%;
 	}
+
+	.title {
+		width: 70%;
+	}	
 }

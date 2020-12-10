@@ -15,13 +15,13 @@ nav {
 
 #menuToggle li {
   text-decoration: none;
-  color: #eee8;
+  color: var(--text);
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
 #menuToggle li:hover {
-  color: #f00;
+  color: var(--red);
 }
 
 #menuToggle input {
@@ -79,14 +79,14 @@ nav {
   margin: -100px 0 0 -180px;
   padding: 50px;
   padding-top: 125px;
-  background: #222;
+  background: var(--darkblue);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   text-align: right;
-  border: 1px solid #f008;
+  border: 1px solid var(--gray);
   border-radius: 6px;
 }
 

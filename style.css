@@ -232,7 +232,7 @@ li {
 @media screen and (max-width: 928px) {
 	.center, .box-xl {
 		width: 100%;
-		min-width: 316px;
+		min-width: 320px;
 	}
 
 	.right {
@@ -289,6 +289,10 @@ li {
 	.left, .container {
 		display: block;
 		width: 100%;
+	}
+
+	.center {
+		margin-right: 0;
 	}
 
 	.box-xs {

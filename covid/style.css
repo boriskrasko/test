@@ -95,11 +95,29 @@ main {
 	height: 580px;
 }
 
-.box-map {
+.box-map, .box-chart {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+.box-chart {
+	align-items: center;
+}
+
+.box-chart .heading {
+	display: flex;
+	grid-gap: 10px;
+}
+
+.box-chart button {
+	background: transparent;
+	color: var(--blue);
+	outline: none;
+	border: none;
+
+}
+
 
 .global-cases, .time {
 	display: flex;

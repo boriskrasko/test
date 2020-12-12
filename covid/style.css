@@ -22,6 +22,17 @@ li:hover {
 	border: 1px solid var(--purple);
 }
 
+button, select {
+	cursor: pointer;
+}
+
+button {
+	background: transparent;
+	color: var(--blue);
+	outline: none;
+	border: none;
+}
+
 body {
 	min-width: 320px;
 	font-family: Roboto, Arial, sans-serif;
@@ -75,6 +86,12 @@ main {
 	border: 1px solid var(--purple);
 }
 
+.inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .box-xs {
 	width: 248px;
 	height: 83px;
@@ -107,7 +124,6 @@ main {
 
 .box-chart .heading {
 	display: flex;
-	grid-gap: 10px;
 }
 
 .box-chart button {
@@ -115,9 +131,8 @@ main {
 	color: var(--blue);
 	outline: none;
 	border: none;
-
+	margin: 0 10px;
 }
-
 
 .global-cases, .time {
 	display: flex;

@@ -5,6 +5,7 @@
 	--blue: #17D0FA;
 	--dirtyblue: #17D0FADD;
 	--text: rgba(243, 243, 243, 0.7);
+	--darktext: rgba(243, 243, 243, 0.4);
 	--purple: rgb(123, 97, 255);
 }
 
@@ -12,14 +13,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/*border: 1px solid gray;*/
 }
 
 li {
 	border: 1px solid transparent;
-}
-
-li:hover {
-	border: 1px solid var(--purple);
 }
 
 button, select {
@@ -34,25 +32,24 @@ button {
 }
 
 body {
+	width: 1024px;
+	height: 768px;
 	min-width: 320px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
 	font-family: Roboto, Arial, sans-serif;
 	background: var(--darkblue);
 }
 
-#app {
-	width: 1024px;
-	height: 768px;
-	margin: 0 auto;
-	padding: 0 20px 0 20px;
-}
-
-header, footer {
+header {
 	min-height: 90px;
+	padding: 5px;
 	background: var(--darkblue);
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
+	grid-area: header;
 }
 
 .title {
@@ -67,18 +64,13 @@ header, footer {
 	font-size: 11px;
 }
 
-main {
-	display: flex;
-}
-
 .box {
 	min-width: 248px;
 	min-height: 83px;
 	background: var(--black);
 	border-radius: 6px;
-	margin-bottom: 7px;
-	margin-right: 7px;
-	padding: 20px;
+	margin: 2px;
+	padding: 5px 20px 20px 20px;
 	border: 1px solid transparent;
 }
 
@@ -88,7 +80,7 @@ main {
 
 .inner {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 }
 
@@ -99,12 +91,12 @@ main {
 
 .box-m {
 	width: 248px;
-	height: 399px;
+	height: 402px;
 }
 
 .box-s {
 	width: 281px;
-	height: 188px;
+	height: 189.3px;
 }
 
 .box-xl {
@@ -112,21 +104,49 @@ main {
 	height: 580px;
 }
 
-.box-map, .box-chart {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.global-cases {
+	grid-area: global-cases;
 }
 
-.box-chart {
+.country-cases {
+	grid-area: country-cases;
+}
+
+.date {
+	grid-area: date;
+}
+
+.map {
+	grid-area: map;
+}
+
+.death-cases {
+	grid-area: death-cases;
+}
+
+.recovery-cases {
+	grid-area: recovery-cases;
+}
+
+.graph {
+	grid-area: graph;
+}
+
+.map, .graph {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.graph {
 	align-items: center;
 }
 
-.box-chart .heading {
+.graph .heading {
 	display: flex;
 }
 
-.box-chart button {
+.graph button {
 	background: transparent;
 	color: var(--blue);
 	outline: none;
@@ -134,7 +154,7 @@ main {
 	margin: 0 10px;
 }
 
-.global-cases, .time {
+.global-cases, .date {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -145,16 +165,23 @@ main {
 	font-size: 11px;
 }
 
-.glabal-counter {
+.global-cases .heading {
+	margin-top: 10px;
+}
+
+.global-counter {
 	font-size: 34px;
 	color: var(--blue);
 	margin-top: 2px;
 }
 
-.counter, .date {
+.counter, .update-time {
 	color: var(--blue);
 	margin-right: 7px;
-	margin-left: 2px;
+}
+
+.update-date {
+	margin-top: 5px;
 }
 
 .cases {
@@ -166,12 +193,12 @@ main {
 }
 
 .list ul {
-	margin-top: 20px;
+	margin-top: 5px;
 	list-style: none;
 }
 
 .list li {
-	width: 212px;
+	width: 206px;
 	height: 29px;
 	background: var(--dark);
 	color: var(--text);
@@ -180,38 +207,101 @@ main {
 	border-radius: 6px;
 }
 
-.search {
-	display: flex;
-	justify-content: flex-end;
+.list li:hover {
+	border: 1px solid var(--purple);
 }
 
-.search input {
-	width: 121px;
+.search {
+	margin-top: 5px;
+	width: 206px;
+	display: flex;
+	justify-content: flex-end;
+	opacity: 0.5;
+}
+
+.box-xl .search {
+	width: 100%;
+}
+
+.box-xl .input {
+	width: 128px;
+}
+
+.box-m input {
+	width: 190px;
+}
+
+.wrapper {
+	margin-top: 5px;
+	width: 220px;
+	height: 310px;
+	overflow-y: scroll;
+}
+
+.box-s .wrapper {
+	width: 250px;
+	height: 105px;
+}
+
+.global-counter_deaths, .global-counter_recovery {
+	font-size: 26px;
+	color: #fffd;
+}
+
+.box-s ul li {
+	width: 95%;
+}
+
+.search .input {
+	background: #131E27;
+	border-radius: 6px;
+}
+
+.input {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.input input {
 	height: 24px;
-	background: #8882;
+	background: transparent;
 	border: none;
 	outline: none;
 	color: var(--text);
-	border-radius: 6px;
 	padding: 6px;
 	font-size: 8px;
 }
 
-.map .content {
+.input button {
+	margin-right: 10px;
+}
+
+button svg:hover {
+  fill: red !important;
+}
+
+.map-intaractive .map-intaractive-content {
+	margin-top: 20px;
 	width: 100%;
-	height: 450px;
+	height: 470px;
 	display: flex;
 	justify-content: center;
 }
 
 footer {
 	width: 100%;
-	height: 60px;
+	min-height: 60px;
+	margin-top: 5px;
 	background: var(--darkblue);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+	grid-area: footer;
 }
 
 .logo pre {
@@ -230,10 +320,11 @@ footer {
 }
 
 footer ul {
+	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	list-style: none;
 	color: var(--text);
 	font-size: 11px;
@@ -262,8 +353,10 @@ footer ul li:first-child {
 }
 
 .github-links {
+	width: 700px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	flex-wrap: n
 	align-items: center;
 }
 
@@ -272,4 +365,77 @@ footer ul li:first-child {
 	margin-right: 40px;
 	margin-left: 40px;
 	font-size: 14px;
+}
+
+main {
+  display: grid;
+  grid-template-areas: 
+  "global-cases map death-cases"
+  "country-cases map death-cases"
+  "country-cases map recovery-cases"
+  "country-cases map graph"
+  "date map graph"
+}
+
+@media screen and (max-width: 1023px) {
+	body {
+	  width: 100%;
+	  height: auto;
+	}
+	main {
+	  display: grid;
+	  grid-template-areas: 
+	  "map map"
+	  "global-cases death-cases"
+	  "country-cases death-cases"
+	  "country-cases recovery-cases"
+	  "country-cases graph"
+	  "date graph"
+	}
+	
+	li, li, .wrapper {
+		width: 98% !important;
+	}
+
+	.box {
+		width: 99.2%;
+	}
+
+	.map  {
+		width: 100%;
+	}
+
+	.github-links {
+		margin-top: 20px;
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	body {
+	  width: 100%;
+	  height: auto;
+	}
+	main {
+	  display: grid;
+	  grid-template-areas: 
+	  "map"
+	  "global-cases"
+	  "country-cases"
+	  "date"
+	  "death-cases"
+	  "recovery-cases"
+	  "graph"
+	}
+	
+	li, li, .wrapper {
+		width: 98% !important;
+	}
+
+	.box {
+		width: 100%;
+	}
+	.map  {
+		width: 100%;
+	}
 }

@@ -1,0 +1,57 @@
+.select {
+  position: relative;
+}
+.select .selectBtn {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  padding: 5px 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.selectDropdown {
+  min-width: 100%;
+  min-height: 83px;
+  background: var(--black);
+  border-radius: 6px;
+  border: 1px solid transparent;
+  list-style: none;
+}
+
+.select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+  z-index: 1;
+  background: var(--black);
+  transform: scale(1, 0);
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+.select .selectDropdown .option {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.select .selectDropdown .option:hover {
+  color: var(--blue);
+}
+.select .selectDropdown.toggle {
+  visibility: visible;
+  transform: scale(1, 1);
+}
+
+.arrow {
+  margin-left: 7px;
+  margin-bottom: 2px;
+  border: solid var(--blue);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index: 0;
+}

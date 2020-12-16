@@ -61,16 +61,41 @@
 //   console.log(getTail([ 1, 3, 4, 5 ], 2))
 
 // function toCsvText(arr) {
-//   return arr.map((x) => x.join(',') + '\n');
+//   return arr.map((x) => `${x}\n`);
 // }
 
 // console.log(toCsvText([[ 0, 1, 2, 3, 4 ],[ 10,11,12,13,14 ],[ 20,21,22,23,24 ],[ 30,31,32,33,34 ]]));
 
-function get3TopItems(arr) {
-  return arr.split('').reverse().join(' ');
+
+// function isBracketsBalanced(str) {
+//   if (str === '][' || str === '{)') {
+//     return false;
+//   }
+//   return str.slice(str.length / 2, str.length + 1).split('').reverse().join('');
+//   // return (str.length % 2 === 0)
+//   //   ? str.slice(0, str.length + 1 / 2) === (str.slice(str.length + 1 / 2, str.length + 1).split('').reverse().join('')) || true : false;
+// }
+
+// console.log(isBracketsBalanced('<)(>'));
+
+function roundToPowerOfTen(num, pow) {
+  pow = Math.pow(10, pow);
+  return Math.round(num / pow) * pow
 }
 
-console.log(get3TopItems([ 0, 1, 2, 3, 4 ]));
+console.log(roundToPowerOfTen(1234, 1));
+
+
+// function generateOdds(len) {
+//   return '1'.repeat(len);
+// }
+
+// console.log(generateOdds(5));
+// function get3TopItems(arr) {
+//   return arr.split('').reverse().join(' ');
+// }
+
+// console.log(get3TopItems([ 0, 1, 2, 3, 4 ]));
 
 // function getLastDigit(value) {
 //   value = value.toString();
@@ -87,10 +112,17 @@ console.log(get3TopItems([ 0, 1, 2, 3, 4 ]));
 
 
 
+// const city = {
+//   name: 'Warsaw',
+//   capital: true,
+//   population: 1500000
+//  }
 
+// const town = Object.create(city);
+// town.name = 'Krakou'
 
-
-
+// const village = Object.create(town);
+// village.name = city.name
 
 
 

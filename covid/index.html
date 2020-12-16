@@ -7,8 +7,10 @@
       <title>COVID-19 Dashboard</title>
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="stylesheet" type="text/css" href="scroll.css">
+      <link rel="stylesheet" type="text/css" href="dropdown.css">
    </head>
    <body>
+ <!-- HEADER -->      
    <header class="header">
       <div class="title">
          COVID-19 Dashboard
@@ -17,245 +19,267 @@
          by the Center for Systems Science and Engineering (CSSE)<br> at Johns Hopkins University (JHU)
       </div>
    </header>
-   <main>
-         <div class="box box-xs global-cases">
-            <div class="heading">
-               Global Cases
-            </div>
-            <div class="global-counter">
-               68,783,534
-            </div>
+
+<!-- GLOBAL CASES --> 
+   <div class="box box-xs global-cases">
+      <div class="heading">
+         Global Cases
+      </div>
+      <div class="global-counter">
+         68,783,534
+      </div>
+   </div>
+
+<!-- COUNTRY CASES --> 
+   <div class="box box-m country-cases">
+       <div class="inner">
+         <button>
+            <img src="zoom.svg" alt="zoom">
+         </button>
+      </div>
+      <div class="select drop-down-list cases">
+         <div class="selectBtn">Cases by Country/Region/Sovereignty
+            <span><i class="arrow select"></i></span>
          </div>
-         <div class="box box-m country-cases">
-             <div class="inner">
-               <button>
-                  <img src="zoom.svg" alt="zoom">
-               </button>
-            </div>
-             <div class="drop-down-list">
-               <select class="cases">
-                  <option>Cases by Country/Region/Sovereignty</option>
-                  <option>item</option>
-                  <option>item</option>
-                  <option>item</option>
-               </select>
-            </div>
-            <div class="search">
-               <div class="input">
-                  <input type="input" name="search" value="Search by Country/Region">
-                  <button>
-                     <img src="loupe.svg" alt="loupe">
-                  </button>
-               </div>
-            </div>
-            <div class="wrapper">
-               <div class="list">
-                  <ul>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <div class="box box-xs date">
-            <div class="inner">
-               <button>
-                  <img src="zoom.svg" alt="zoom">
-               </button>
-            </div>
-            <div class="heading">
-               Last Updated at (M/D/YYYY)
-            </div>
-            <div class="update-time">
-               12/10/2020, 7:26 am
-            </div>
-         </div>
-        <div class="box box-xl map">
-         <div class="inner">
+         <ul class="selectDropdown">
+            <li class="option">Cases by Country/Region/Sovereignty</li>
+            <li class="option">Second option</li>
+            <li class="option">Third option</li>
+         </ul>
+      </div>
+      <div class="search">
+         <div class="input">
+            <input type="input" name="search" value="Search by Country/Region">
             <button>
-               <img src="zoom.svg" alt="zoom">
+               <img src="loupe.svg" alt="loupe">
             </button>
          </div>
-         <div class="drop-down-list">
-            <select class="cases">
-               <option>Global Deaths</option>
-               <option>item</option>
-               <option>item</option>
-               <option>item</option>
-            </select>
-            </div>
-         <div class="search">
-            <div class="input">
-               <input type="input" name="search" value="Search by Country/Region">
-               <button>
-                  <img src="loupe.svg" alt="loupe">
-               </button>
-            </div>
+      </div>
+      <div class="wrapper">
+         <div class="list">
+            <ul>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+            </ul>
          </div>
-         <div class="map-intaractive-">
-            <div class="map-intaractive-content">
-               <img src="map.png" alt="map">
-            </div>
-            <div class="zoom"></div>
-         </div>  
-        </div>
-        <div class="box box-s death-cases">
-            <div class="inner">
-               <button>
-                  <img src="zoom.svg" alt="zoom">
-               </button>
-            </div>
-            <div class="drop-down-list">
-               <select class="cases">
-                  <option>Global Deaths</option>
-                  <option>item</option>
-                  <option>item</option>
-                  <option>item</option>
-               </select>
-            </div>
-            <div class="global-counter_deaths">
-               68,783,534
-            </div>
-            <div class="wrapper">
-               <div class="list">
-                  <ul>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                      <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-        </div>
-         <div class="box box-s recovery-cases">
-            <div class="inner">
-               <button>
-                  <img src="zoom.svg" alt="zoom">
-               </button>
-            </div>
-            <div class="drop-down-list">
-               <select class="cases">
-                  <option>Global Deaths</option>
-                  <option>item</option>
-                  <option>item</option>
-                  <option>item</option>
-               </select>
-            </div>
-            <div class="global-counter_recovery">
-               Deaths, Recovered
-            </div>
-            <div class="wrapper">
-               <div class="list">
-                  <ul>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                      <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                     <li>
-                        <span class="counter">15,386,562</span>
-                        <span class="country">USA</span>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-        </div>
-        <div class="box box-s graph">
-            <div class="heading">
-               <button>
-                  <img src="arrow-left.svg" alt="arrow">
-               </button>
-               <span>Global Chart</span>
-               <button>
-                  <img src="arrow-right.svg" alt="arrow">
-               </button>
-            </div>
-            <div class="chart">
-              <img src="chart.png" alt="chart">
-            </div>
-        </div>
-   </main>
+      </div>
+   </div>
+
+<!-- DATE -->  
+   <div class="box box-xs date">
+      <div class="inner">
+         <button>
+            <img src="zoom.svg" alt="zoom">
+         </button>
+      </div>
+      <div class="heading">
+         Last Updated at (M/D/YYYY)
+      </div>
+      <div class="update-time">
+         12/10/2020, 7:26 am
+      </div>
+   </div>
+
+<!-- MAP-->  
+  <div class="box box-xl map">
+   <div class="inner">
+      <button>
+         <img src="zoom.svg" alt="zoom">
+      </button>
+   </div>
+   <div class="select drop-down-list cases">
+      <div class="selectBtn">Cumulative Cases
+         <span><i class="arrow select"></i></span>
+      </div>
+      <ul class="selectDropdown">
+         <li class="option">Cumulative Cases</li>
+         <li class="option">Second option</li>
+         <li class="option">Third option</li>
+      </ul>
+   </div>
+   <div class="search">
+      <div class="input">
+         <input type="input" name="search" value="Search by Country/Region">
+         <button>
+            <img src="loupe.svg" alt="loupe">
+         </button>
+      </div>
+   </div>
+   <div class="map-intaractive-">
+      <div class="map-intaractive-content">
+         <img src="map.png" alt="map">
+      </div>
+      <div class="zoom"></div>
+   </div>  
+  </div>
+
+<!-- DEATH-->  
+  <div class="box box-s death-cases">
+      <div class="inner">
+         <button>
+            <img src="zoom.svg" alt="zoom">
+         </button>
+      </div>
+     <div class="select drop-down-list cases">
+      <div class="selectBtn">Global Deaths
+         <span><i class="arrow select"></i></span>
+      </div>
+      <ul class="selectDropdown">
+         <li class="option">Global Deaths</li>
+         <li class="option">Second option</li>
+         <li class="option">Third option</li>
+      </ul>
+   </div>
+      <div class="global-counter_deaths">
+         68,783,534
+      </div>
+      <div class="wrapper">
+         <div class="list">
+            <ul>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+                <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+            </ul>
+         </div>
+      </div>
+  </div>
+
+<!-- RECOVERY-->  
+   <div class="box box-s recovery-cases">
+      <div class="inner">
+         <button>
+            <img src="zoom.svg" alt="zoom">
+         </button>
+      </div>
+      <div class="select drop-down-list cases">
+      <div class="selectBtn">US State Level
+         <span><i class="arrow select"></i></span>
+      </div>
+         <ul class="selectDropdown">
+            <li class="option">Global Deaths</li>
+            <li class="option">Second option</li>
+            <li class="option">Third option</li>
+         </ul>
+      </div>
+      <div class="global-counter_recovery">
+         Deaths, Recovered
+      </div>
+      <div class="wrapper">
+         <div class="list">
+            <ul>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+                <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+               <li>
+                  <span class="counter">15,386,562</span>
+                  <span class="country">USA</span>
+               </li>
+            </ul>
+         </div>
+      </div>
+  </div>
+
+<!-- GRAPH -->  
+  <div class="box box-s graph">
+      <div class="heading">
+         <button>
+            <img src="arrow-left.svg" alt="arrow">
+         </button>
+         <span>Global Chart</span>
+         <button>
+            <img src="arrow-right.svg" alt="arrow">
+         </button>
+      </div>
+      <div class="chart">
+        <img src="chart.png" alt="chart">
+      </div>
+   </div>
+
+<!-- FOOTER -->
    <footer class="box">
       <div class="logo">
          <pre>
@@ -285,5 +309,6 @@ SC HO OL</pre>
       </div>
    </footer>
    <script src="main.js"></script>
+   <script src="dropdown.js"></script>
    </body>
 </html>

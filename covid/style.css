@@ -398,7 +398,7 @@ input:focus::placeholder {
 /* Deaths Recovery Cases */
 .container_s .scroll-container {
 	width: 250px;
-	height: 100px;
+	height: 104px;
 }
 
 .container_s ul li {
@@ -474,6 +474,7 @@ input:focus::placeholder {
 
 footer {
 	width: 100%;
+	max-width: 978px;
 	min-height: 60px;
 	margin-top: 5px;
 	background: var(--darkblue);
@@ -482,6 +483,10 @@ footer {
 	align-items: center;
 	flex-wrap: wrap;
 	grid-area: footer;
+}
+
+.logo {
+	margin-right: 10px;
 }
 
 .logo pre {
@@ -504,10 +509,12 @@ footer ul {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	list-style: none;
 	color: var(--text);
 	font-size: 11px;
+	white-space: nowrap;
+	grid-gap: 10px;
 }
 
 footer ul li a {
@@ -533,10 +540,6 @@ footer ul li {
 	margin-right: 30px;
 }
 
-footer ul li:first-child {
-	margin-left: 20px;
-}
-
 .github-links {
 	display: flex;
 	justify-content: flex-start;
@@ -547,13 +550,13 @@ footer ul li:first-child {
 .year {
 	color: var(--blue);
 	font-size: 14px;
+	margin-right: 50px;
 }
 
 @media screen and (max-width: 1023px) {
 	body {
 	  width: 100%;
 	  height: auto;
-	  display: grid;
 	  grid-template-areas:
 	  "header header"
 	  "map map"
@@ -585,16 +588,14 @@ footer ul li:first-child {
 	.github-links {
 		margin-top: 20px;
 	}
-
-	footer ul li:first-child {
-	margin-left: 0;
-}
+	.year {
+		margin-right: 10px;
+	}
 
 }
 
 @media screen and (max-width: 700px) {
 	body {
-	  display: grid;
 	  grid-template-areas:
 	  "header"
 	  "map"
@@ -613,4 +614,17 @@ footer ul li:first-child {
 	.map  {
 		width: 100%;
 	}
+	footer ul li:first-child {
+		margin-left: 0;
+	}
+	footer ul, .github-links  {
+		flex-wrap: wrap !important;
+	}
+	.github-links ul, .github-links ul li a  {
+		font-size: 14px;
+	}
+	.year {
+		margin: 40px auto 5px;
+	}
 }
+

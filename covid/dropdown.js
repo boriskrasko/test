@@ -1,20 +1,21 @@
-const select = document.querySelectorAll('.selectBtn');
-const option = document.querySelectorAll('.option');
-let index = 1;
-
-select.forEach(a => {
-  a.addEventListener('click', b => {
-    const next = b.target.nextElementSibling;
-    next.classList.toggle('toggle');
-    next.style.zIndex = index++;
-  })
-})
-option.forEach(a => {
-  a.addEventListener('click', b => {
-    b.target.parentElement.classList.remove('toggle');
-    
-    const parent = b.target.closest('.select').children[0];
-    parent.setAttribute('data-type', b.target.getAttribute('data-type'));
-    parent.innerText = b.target.innerText;
-  })
-})
+for (const dropdown of document.querySelectorAll('.select-wrapper')) {
+    dropdown.addEventListener('click', function() {
+        this.querySelector('.select').classList.toggle('open');
+    })
+}
+for (const option of document.querySelectorAll('.option')) {
+    option.addEventListener('click', function() {
+        if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
+        }
+    })
+}
+window.addEventListener('click', function(e) {
+    for (const select of document.querySelectorAll('.select')) {
+        if (!select.contains(e.target)) {
+            select.classList.remove('open');
+        }
+    }
+});

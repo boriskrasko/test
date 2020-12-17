@@ -19,6 +19,7 @@
      line-height: 13px;
      color: var(--text);
      height: 20px;
+     padding: 13px 0 13px 2px;
      background: transparent;
      cursor: pointer;
 }
@@ -28,6 +29,7 @@
 }
 
 .options {
+     max-width: 248px;
      position: absolute;
      display: block;
      top: 100%;
@@ -52,7 +54,7 @@
 .option {
      position: relative;
      display: block;
-     padding: 13px 0 13px 0;
+     padding: 13px 0 13px 2px;
      font-size: 11px;
      line-height: 13px;
      color: var(--text);

@@ -25,7 +25,7 @@ li {
 	cursor: default;
 }
 
-button, select, {
+button, select, button img, button object {
 	cursor: pointer;
 }
 
@@ -37,15 +37,17 @@ button {
 }
 
 body {
+	position: relative;
 	width: 1024px;
 	min-width: 320px;
 	margin: 0 auto;
-	padding: 0 20px 0 20px;
+	padding: 0 20px 20px 20px;
 	font-family: Roboto, Arial, sans-serif;
 	background: var(--darkblue);
+	overflow-x: hidden;
 
 	display: grid;
-	grid-template-areas: 
+	grid-template-areas:
 	"header header header"
 	"global-cases map death-cases"
 	"country-cases map death-cases"
@@ -130,8 +132,17 @@ body {
 	filter: invert(100%) saturate(2878%) hue-rotate(170deg) brightness(104%) contrast(100%);
 }
 
+.container_s ul li,
+.container_m ul li {
+	width: 96%
+}
 
 /* Search */
+
+.search {
+	max-width: 212px;
+}
+
 .search .input {
 	background: var(--darkness);
 	border-radius: 6px;
@@ -139,6 +150,7 @@ body {
 
 .input {
 	width: 100%;
+	padding-right: 9px;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -220,6 +232,7 @@ input:focus::placeholder {
 	margin: 2px;
 	padding: 14px 18px 16px 18px;
 	border: 1px solid transparent;
+	z-index: 0;
 }
 
 .container:hover {
@@ -318,32 +331,39 @@ input:focus::placeholder {
 	min-height: 470px;
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .map-intaractive-content > img {
 	width: 100%;
-	min-height: 498px;
+	height: 498px;
 }
 
-.bookmarks {
+.bookmarks, .legend, .basemaps {
 	position: absolute;
 	bottom: 46px;
 	right: 17px;
 	min-width: 248px;
+	max-width: 248px;
 	min-height: 83px;
 	background: var(--black);
 	border-radius: 6px;
 	margin: 2px;
 	padding: 14px 18px 16px 18px;
 	border: 1px solid transparent;
-
 }
 
-.bookmarks .scroll-container {
+.bookmarks .scroll-container,
+.basemaps .scroll-container {
 	height: 100px;
 }
 
-.bookmarks-county-list li {
+.legend .scroll-container {
+	height: 65px;
+}
+
+.bookmarks-county-list li,
+.legend-list li {
 	display: flex;
 	align-items: center;
 	font-size: 8px;
@@ -352,9 +372,32 @@ input:focus::placeholder {
 	cursor: pointer;
 }
 
-.bookmarks-county-list li:hover {
+.bookmarks-county-list li:hover,
+.legend-list li:hover {
 	color: var(--dirtyblue);
-	border: 1px solid transparent;
+}
+
+.legend-heading {
+	margin-bottom: 7px;
+	font-size: 12px;
+	line-height: 8px;
+	color: var(--text);
+}
+
+.legend-subheading {
+	margin-top: 12px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	line-height: 8px;
+	color: var(--text);
+}
+
+.legend-confirm {
+	margin-top: 12px;
+	margin-bottom: 7px;
+	font-size: 8px;
+	line-height: 8px;
+	color: var(--text);
 }
 
 .map-zoom-in-out {
@@ -394,6 +437,72 @@ input:focus::placeholder {
 	justify-content: space-around;
 }
 
+.bookmarks-select-panel button {
+	width: 33%;
+}
+
+.legend .ellipse{
+    border-radius: 50%;
+    background: var(--blue);
+    margin-right: 10px;
+}
+
+.ellipse100 {
+    width: 16px;
+    height: 16px;
+}
+
+.ellipse50 {
+    width: 14px;
+    height: 14px;
+}
+
+.ellipse10 {
+    width: 12px;
+    height: 12px;
+}
+
+.ellipse5 {
+    width: 10px;
+    height: 10px;
+}
+
+.basemaps-list ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: space-around;
+}
+
+.basemaps-list ul li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	display: block;
+	position: relative;
+	width: 82px;
+	height: 48px;
+	background: var(--darkblue);
+	border-radius: 6px;
+	border: 1px solid transparent;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.box:hover {
+	border: 1px solid var(--blue);
+}
+
+.basemaps-item {
+	font-size: 8px;
+	line-height: 8px;
+	color: var(--text);
+}
 
 /* Deaths Recovery Cases */
 .container_s .scroll-container {
@@ -401,9 +510,6 @@ input:focus::placeholder {
 	height: 104px;
 }
 
-.container_s ul li {
-	width: 96%
-}
 
 .death-cases-list .counter-value {
 	font-size: 8px;
@@ -471,7 +577,7 @@ input:focus::placeholder {
 	margin: 0 10px;
 }
 
-
+/* Footer */
 footer {
 	width: 100%;
 	max-width: 978px;
@@ -483,6 +589,7 @@ footer {
 	align-items: center;
 	flex-wrap: wrap;
 	grid-area: footer;
+	z-index: 0;
 }
 
 .logo {
@@ -553,6 +660,30 @@ footer ul li {
 	margin-right: 50px;
 }
 
+/* Modal Window */
+.modal-window {
+	position: absolute;
+	top: 90px;
+	right: 20px;
+	left: 20px;
+	bottom: 20px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	display: none;
+	z-index: 2;
+	padding: 0;
+}
+
+.active {
+	display: block;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
 @media screen and (max-width: 1023px) {
 	body {
 	  width: 100%;
@@ -567,7 +698,7 @@ footer ul li {
 	  "date graph"
 	  "footer footer"
 	}
-	
+
 	li, li, .scroll-container {
 		width: 98% !important;
 	}
@@ -591,6 +722,10 @@ footer ul li {
 	.year {
 		margin-right: 10px;
 	}
+	.modal-window {
+		right: 0;
+		left: -1px;
+	}
 
 }
 
@@ -607,7 +742,7 @@ footer ul li {
 	  "graph"
 	  "footer"
 	}
-	
+
 	.container {
 		width: 100%;
 	}
@@ -628,3 +763,83 @@ footer ul li {
 	}
 }
 
+.full {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 57px 20px;
+}
+
+.full .wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.full .wrapper div {
+	width: 100%;
+}
+
+.full .select__trigger span {
+     width: 242px;
+}
+
+.full .scroll-container {
+	width: 100%;
+	height: 560px
+}
+
+.full .bookmarks .scroll-container,
+.full .basemaps .scroll-container {
+	height: 100px;
+}
+
+.full .legend .scroll-container {
+	height: 66px;
+}
+
+.full .legend .scroll-container li,
+.full .bookmarks .scroll-container li {
+	width: 96%;
+}
+
+.map-intaractive {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.full .map-intaractive-content > img {
+	width: 100%;
+	height: 580px;
+}
+
+.full .map-area {
+	width: 100%;
+}
+
+.full .global-heading,
+.full .date-heading {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+.full .global-cases-counter, .full .update-time {
+	font-size: 68px;
+}
+
+.map-nav {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+.hide {
+     display: none;
+}

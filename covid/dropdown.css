@@ -2,6 +2,7 @@
      position: relative;
      user-select: none;
      min-width: 200px;
+     max-width: 200px;
 }
 
 .select {

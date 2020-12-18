@@ -332,11 +332,10 @@ input:focus::placeholder {
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
-}
+  background: url('map.png');
+  background-size:cover;
+  background-repeat: no-repeat;
 
-.map-intaractive-content > img {
-	width: 100%;
-	height: 498px;
 }
 
 .bookmarks, .legend, .basemaps {
@@ -582,6 +581,7 @@ footer {
 	width: 100%;
 	max-width: 978px;
 	min-height: 60px;
+  height: 70px;
 	margin-top: 5px;
 	background: var(--darkblue);
 	display: flex;
@@ -726,6 +726,9 @@ footer ul li {
 		right: 0;
 		left: -1px;
 	}
+  footer {
+    height: auto;
+  }
 
 }
 
@@ -811,11 +814,6 @@ footer ul li {
 .map-intaractive {
 	display: flex;
 	justify-content: flex-start;
-}
-
-.full .map-intaractive-content > img {
-	width: 100%;
-	height: 580px;
 }
 
 .full .map-area {

@@ -39,6 +39,7 @@ button {
 body {
 	position: relative;
 	width: 1024px;
+  height: 100vh;
 	min-width: 320px;
 	margin: 0 auto;
 	padding: 0 20px 20px 20px;
@@ -138,7 +139,6 @@ body {
 }
 
 /* Search */
-
 .search {
 	max-width: 212px;
 }
@@ -200,6 +200,7 @@ input:focus::placeholder {
 
 /* Header */
 .header {
+  position: relative;
 	min-height: 90px;
 	padding: 5px;
 	background: var(--darkblue);
@@ -289,7 +290,7 @@ input:focus::placeholder {
 }
 
 /* Global Cases */
-.global-cases, .date {
+.global-cases {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -307,6 +308,12 @@ input:focus::placeholder {
 }
 
 /* Date */
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .update-date {
 	margin-top: 5px;
 }
@@ -333,6 +340,7 @@ input:focus::placeholder {
 	justify-content: center;
 	overflow: hidden;
   background: url('map.png');
+  background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
 
@@ -509,7 +517,6 @@ input:focus::placeholder {
 	height: 104px;
 }
 
-
 .death-cases-list .counter-value {
 	font-size: 8px;
 	line-height: 8px;
@@ -682,6 +689,44 @@ footer ul li {
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media screen and (min-width: 1040px) {
+  body {
+    justify-content: center;
+    /*margin-top: 3vw;*/
+    width: 100%;
+    max-width: 1640px;
+    min-height: 720px;
+    max-height: 1080px;
+    height: auto;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "global-cases map death-cases"
+    "country-cases map death-cases"
+    "country-cases map recovery-cases"
+    "country-cases map graph"
+    "date map graph"
+    "footer footer footer"
+  }
+
+  footer {
+    max-width: 100%;
+  }
+  .container {
+    min-width: 25%;
+  }
+  .container_l {
+    width: 99.5%;
+    height: calc(80vh - 100vh/50%)
+    min-height: 600px;
+  }
+  .map-intaractive-content {
+    height: 70vh;
+    min-height: 520px;
+  }
+
 }
 
 @media screen and (max-width: 1023px) {

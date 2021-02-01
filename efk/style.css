@@ -12,7 +12,6 @@
 	margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid #777; */
 }
 html {
   max-width: 1980px;
@@ -279,15 +278,6 @@ h1 {
   100% {transform: rotate(0deg);}
 }
 
-/* .out  {
-  animation: out 1s ease;
-}
-
-@keyframes out {
-0% {transform: scale(1.2);}
-100% {transform: scale(1);}
-} */
-
 table {
   width: 100%;
   text-align: center;
@@ -336,8 +326,6 @@ footer a:hover {
     font-size: 12px;
   }
 }
-
-
 
 .flip-card {
   perspective: 1000px;

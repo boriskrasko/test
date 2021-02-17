@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="animation.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400&display=swap&subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar-title">Sign up</div>
+      </div>
+      <div class="form">
+        <div class="avatar">
+          <img src="avatar.svg">
+        </div>
+        <div class="form-title">New user?</div>
+        <div class="form-subtitle">Use the form below to create your account.</div>
+        <form>
+          <div class="input">
+            <label for="username">
+            <span>First Name</span>
+            <input id="username" type="text" name="username" placeholder="Alice">
+            </label>
+          </div>
+          <div class="input">
+            <label for="lastname">
+            <span>Last Name</span>
+            <input id="lastname" type="text" name="lastname" placeholder="Miller">
+            </label>
+          </div>
+          <div class="input">
+            <label for="nationality">
+            <span>Nationality</span>
+            <input id="nationality" type="text" name="nationality" placeholder="American">
+            </label>
+          </div>
+          <div class="input">
+            <label for="mail">
+              <span>E-mail</span>
+              <div class="mail-container">
+                <input id="mail" type="text" name="mail" placeholder="alice.miller@yahoo.com">
+                <span>
+                <img src="shape.svg">
+                </span>
+              </div>
+            </label>
+          </div>
+          <div class="input">
+            <label for="birth">
+            <span>Date of Birth</span>
+            <input id="birth" type="text" name="birth" placeholder="12 January 1992">
+            </label>
+          </div>
+          <div class="input">
+            <label for="gender">
+              <span>Gender</span>
+              <div class="gender-container">
+                <span>Male</span>
+                <input id="male" type="radio" name="gender">
+                <span>Female</span>
+                <input id="female" type="radio" name="gender">
+              </div>
+            </label>
+          </div>
+          <div class="input">
+            <label for="password">
+            <span>Password</span>
+            <input id="password" type="text" name="password" placeholder="">
+            </label>
+          </div>
+          <div class="input">
+            <label for="password-confirm">
+            <span>Confirm Password</span>
+            <input id="password-confirm" type="text" name="password-confirm" placeholder="">
+            </label>
+          </div>
+          <div class="submit-container">
+            <button type="submit" class="submit-button">Complete Signup</button>
+          </div>
+        </form>
+        <div class="login">
+          Have an account? <a href="">Login</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

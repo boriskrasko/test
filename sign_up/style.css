@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+  color: #5A61ED;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  z-index: 2
+}
+
+.main {
+  width: 800px;
+  height: 600px;
+  background: #F4F5FC;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 665px;
+  height: 481px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  position: relative;
+  width: 137.2px;
+  height: 480px;
+  background: #5A61ED;
+}
+
+.form {
+  position: relative;
+  width: 527.7px;
+  height: 480px;
+  padding: 38.52px 0  0 20.8px;
+  background: transparent;
+}
+
+.sidebar-title {
+  position: absolute;
+  width: 200px;
+  height: 63px;
+  left: 0;
+  bottom: 89px;
+  font-family: PT Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 63px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  transform: rotate(-90deg);
+}
+
+.form-title {
+  width: 110px;
+  height: 26px;
+  font-family: Work Sans, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.46px;
+  color: #111111;
+}
+
+.form-subtitle {
+  width: 286px;
+  height: 16px;
+  font-family: Work Sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+}
+
+.input {
+  width: 235px;
+  height: 42px;
+  margin: 20px 15px 0 0;
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+label span {
+  font-family: Work Sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7C7C7C;
+}
+
+input {
+  width: 235px;
+  padding: 5px 0 5px 0;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+input::placeholder {
+  font-family: Work Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+}
+
+.submit-container {
+  position: absolute;
+  right: 178px;
+  bottom: 70px;
+}
+
+.submit-button {
+  height: 32px;
+  width: 154px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #5A61ED;
+  border: 0.5px solid #FFFFFF;
+  font-family: PT Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF
+}
+
+.login {
+  position: absolute;
+  width: 147px;
+  left: 20px;
+  bottom: 45px;
+  font-family: Work Sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+  z-index: 4;
+}
+
+.avatar {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  z-index: 1;
+}
+
+.mail-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-container {
+  padding: 4px 0 3px 0;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.gender-container span {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+}
+
+.gender-container input {
+  /*margin-left: -50px;*/
+}
+
+@media screen and (max-width: 800px) {
+  .main {width: 100%}
+  .container {width: 90%}
+  .form {width: auto}
+}
+
+@media screen and (max-width: 616px) {
+  .main {width: 100%; height: 682px; margin:0}
+  .container {width: 90%; height: 682px}
+  .sidebar {height: 682px}
+  .sidebar-title {display: none;}
+  .form {height: 682px}
+  .login {bottom: 10px}
+}
